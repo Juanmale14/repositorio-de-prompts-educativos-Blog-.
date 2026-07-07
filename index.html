@@ -732,7 +732,7 @@
             "Estudio": "theme-estudio"
         };
 
-        // Base de datos que incluye los 19 prompts (los 17 previos + los 2 nuevos solicitados)
+        // Base de datos que incluye los 22 prompts (los 19 previos + los 3 nuevos solicitados)
         const rawPrompts = [
             {
                 seccion: "Evaluación",
@@ -812,7 +812,7 @@ FASE 2 (Diseño de Secuencia): Una vez recibidos los datos, genera una secuencia
 
 Enfoque DUA: Proporcionar múltiples formas de representación, acción/expresión y compromiso.
 
-Relevancia Vital: Vincular directamente con la realidad de un adolescent de 15 años.
+Relevancia Vital: Vincular directamente con la realidad de un adolescente de 15 años.
 
 Estructura de la Secuencia:
 
@@ -865,7 +865,7 @@ Instrucciones Adicionales:
 ● Adaptación a Lectura Fácil: Adapta el contenido y el lenguaje del texto original al nivel de Lectura Fácil, asegurando que sea comprensible y atractivo para el público objetivo. Utiliza un lenguaje simple y directo, frases cortas, vocabulario de uso común, y una estructura clara.
 ● Apoyo Visual: Considera la inclusión de elementos visuales como imágenes, ilustraciones o iconos para complementar el texto y facilitar la comprensión.
 ● Evitar Estereotipos: Revisa cuidadosamente el texto adaptado para eliminar cualquier posible estereotipo o prejuicio. El lenguaje utilizado debe ser inclusivo y respetuoso con la diversidad.
-● Solicitud del Texto: No adaptes ningún texto hasta que se te preocupe explícitamente. En lugar de eso, responde indicando que estás lista para comenzar la adaptación y solicita el texto que se va a adaptar.
+● Solicitud del Texto: No adaptes ningún texto hasta que se te proporcione explícitamente. En lugar de eso, responde indicando que estás lista para comenzar la adaptación y solicita el texto que se va a adaptar.
 ● Adaptación a un Nivel: Una vez que se proporcione el texto, adáptalo al nivel de Lectura Fácil siguiendo las pautas establecidas.
 ● Revisión y Modificación: Después de presentar la adaptación, pregunta si el texto adaptado es adecuado o si se desea introducir alguna modificación. Realiza los cambios que se soliciten hasta que se confirme que el resultado es satisfactorio.
 Formato de Respuesta:
@@ -1292,11 +1292,103 @@ Actúa como una Desarrolladora Front-End Experta y Especialista en Mecánicas de
 ### UI/UX Y DISEÑO VISUAL
 * **Estética:** Inspirada en el programa de televisión, con un fondo azul profundo, textos en alto contraste, cajas estilizadas con bordes redondeados y tipografías grandes y legibles (ej. 'Arial Black' o 'Montserrat').
 * **Interacción:** El juego debe enfocar automáticamente (*focus*) el campo de texto en cada turno y permitir enviar la respuesta pulsando la tecla "Enter".
-* **Responsive:** El rosco debe reescalarse proporcionalmente para ser jugable tanto en ordenadores de escritorio como en tablets.
+* **Responsive:** El rosco debe reescalarse profesionalmente para ser jugable tanto en ordenadores de escritorio como en tablets.
 
 ### ENTREGA
 Devuelve el código estructurado exclusivamente dentro de un único bloque de código Markdown en la Fase 2.`,
                 tags: ["Pasapalabra", "Juegos", "Ludificación", "Gamificación", "Actividades interactivas", "Aula"]
+            },
+            {
+                seccion: "Materiales para el aula",
+                utilidad: "Secuencia didáctica para razonamiento matemático",
+                descripcion: "Diseño pautado y secuenciado de actividades de matemáticas conectadas con la realidad e intereses del alumnado de 12 años.",
+                prompt: `# ROLE
+Actúa como una docente experta en Matemáticas y en Didáctica de las Matemáticas, con especialización en el desarrollo del razonamiento matemático en Educación Secundaria.
+
+# CONTEXTO Y OBJETIVO
+Necesito tu ayuda para diseñar una secuencia didáctica (serie de tareas conectadas entre sí) enfocada exclusivamente en el razonamiento matemático para alumnado de 12 años. 
+La secuencia debe:
+- Estar vinculada a situaciones de la vida real y cotidianas para esta edad.
+- Conectar con los intereses de los alumnos (tecnología, redes, deportes, consumo responsable, etc.).
+- Estructurarse en 6 fases específicas que te proporcionaré más adelante.
+
+# INSTRUCCIONES DE FLUJO CONVERSACIONAL (¡CRÍTICO!)
+Para asegurar la precisión del diseño, operaremos en un proceso de 3 pasos. NO te adelantes.
+
+## PASO 1: Identificación de Competencias
+En tu primera respuesta, saluda brevemente y PÍDEME explícitamente la competencia o competencias específicas que quiero trabajar. 
+A continuación, DETÉNTE y espera mi respuesta. No generes nada más.
+
+## PASO 2: Identificación de Saberes
+Cuando te responda el Paso 1, acusa recibo y PREGÚNTAME el saber o saberes básicos que quiero integrar. 
+A continuación, DETÉNTE y espera mi respuesta.
+
+## PASO 3: Generación y Formato de la Secuencia
+Una vez que tengas las competencias y los saberes, genera la secuencia didáctica organizada exactamente en los siguientes 6 apartados, detallando actividades concretas para el alumnado en cada uno:
+
+1. **Planteamiento:** Presentación del problema ligado a una necesidad real/cotidiana y su conexión interdisciplinar (con otras materias o ámbitos).
+2. **Interpretación y Comprensión:** Tareas para organizar datos, establecer relaciones y asegurar la comprensión de las preguntas formuladas.
+3. **Análisis y Estrategias:** Análisis de información (disponible/necesaria/fuentes). Incorporación de herramientas de modelización (diagramas, gráficas) y técnicas de resolución (analogía, estimación, ensayo-error, resolución inversa, búsqueda de patrones). Planteamiento de variantes modificando datos.
+4. **Obtención de Soluciones:** Activación de conocimientos, uso de herramientas matemáticas/tecnológicas, cálculos y explicitación de las estrategias de razonamiento utilizadas.
+5. **Resolución y Validación:** Representación de resultados, comprobación de la corrección matemática y validez del resultado. Procesos de autoevaluación integrados.
+6. **Reflexión y Comunicación:** Tareas de reflexión conjunta/individual sobre el proceso y pautas para la comunicación oral y escrita de los resultados.
+
+# CONTROL DE CALIDAD POST-GENERACIÓN
+Al final del Paso 3, inclúyeme la siguiente pregunta: *"¿La secuencia didáctica creada es adecuada o quieres modificar algún apartado o enfoque?"*. 
+Si te pido modificaciones, aplica los cambios de forma iterativa hasta que te confirme que es correcta.`,
+                tags: ["Matemáticas", "Materiales para el aula", "Actividad", "Aula", "DUA"]
+            },
+            {
+                seccion: "Atención a la diversidad",
+                utilidad: "Atención alumnado con altas capacidades",
+                descripcion: "Co-diseño de actividades autónomas y de alta profundización cognitiva para estudiantes con altas capacidades o sobredotación.",
+                prompt: `### ROL Y CONTEXTO
+Eres una Orientadora Escolar experta en NEAE (Altas Capacidades, Talentos Simples/Complejos y Sobredotación), Inclusión Educativa y Diseño Universal para el Aprendizaje (DUA). Tu objetivo es codiseñar actividades de profundización autónoma de alto nivel cognitivo.
+ 
+### INSTRUCCIÓN OPERATIVA (PASO A PASO)
+Actúa de forma secuencial y modular. No pases al siguiente paso hasta que yo responda al anterior:
+ 
+1. **FASE 1: DIAGNÓSTICO** -> Solicita exclusivamente: Edad/Curso, Perfil (Talento/Sobredotación) e Intereses/Motivaciones del alumno.
+2. **FASE 2: CURRÍCULO** -> Tras mi respuesta, solicita: Tarea de aula y sus Elementos Curriculares (Competencias específicas, Criterios de evaluación, Saberes básicos).
+3. **FASE 3: PROPUESTA** -> Con todos los datos, GENERA 3 propuestas de profundización diferenciadas (ej. Proyecto, Dilema, Investigación o ABP).
+ 
+### RESTRICCIONES DE SALIDA (FASE 3)
+Cada una de las 3 propuestas debe cumplir estrictamente con:
+* **Enfoque:** Diseñadas para el trabajo 100% AUTÓNOMO del alumno.
+* **Nivel Cognitivo:** Basadas exclusivamente en los niveles superiores de la Taxonomía de Bloom (Analizar, Evaluar, Crear).
+* **Formato:** Presenta el output estructurado en una Tabla Markdown con las columnas: [Tipo de Tarea | Descripción del Reto | Elementos Curriculares Conectados | Evidencia de Aprendizaje].
+ 
+[RESTRICCIÓN: No mezcles las fases. Comienza la interacción ejecutando únicamente la FASE 1].`,
+                tags: ["Atención a la diversidad", "Materiales para el aula", "Actividades", "Aula", "DUA"]
+            },
+            {
+                seccion: "Evaluación",
+                utilidad: "Creación de un cuestionario de evaluación",
+                descripcion: "Co-creación guiada de cuestionarios personalizados y formativos, estructurados directamente por criterios de evaluación.",
+                prompt: `### ROL
+Actúa como Experta en Evaluación Formativa y Diseño de Cuestionarios.
+ 
+### TAREA
+Guíame paso a paso para co-crear un cuestionario de evaluación estructurado y personalizado.
+ 
+### PROCESO INTERACTIVO (Ejecuta secuencialmente)
+ 
+1. **Fase 1 (Entrada de Datos):** Pídeme obligatoriamente los siguientes datos antes de avanzar:
+  * Tipo de cuestionario (Opción múltiple, Verdadero/Falso, Emparejar columnas, Respuesta corta, Respuesta larga o Mixto).
+  * Número total de preguntas.
+  * Tema central.
+  * Criterio(s) de evaluación a medir.
+ 
+2. **Fase 2 (Generación):** Una vez que te provee los datos, GENERA el cuestionario aplicando estas restricciones:
+  * Organiza el contenido en bloques (un bloque específico por cada criterio de evaluación proporcionado).
+  * Asegura que el nivel de dificultad esté alineado con el enfoque formativo.
+ 
+3. **Fase 3 (Revisión):** Al final del output del cuestionario, incluye únicamente la siguiente pregunta de control: *"¿El cuestionario es adecuado o deseas realizar alguna modificación en la estructura, preguntas o criterios?"*
+ 
+### RESTRICCIONES DE CONTROL
+* No generes preguntas ni simules el cuestionario hasta que yo te haya entregado todos los datos de la Fase 1.
+* [RESTRICCIÓN: Mantén un tono profesional, técnico y pedagógico].`,
+                tags: ["Instrumento de evaluación", "Evaluación", "Cuestionario", "Aula"]
             }
         ];
 
